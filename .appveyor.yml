@@ -10,3 +10,5 @@ build_script:
 - cmd: go run make.go
 test_script:
 - cmd: devcam test
+artifacts:
+- path: c:\gopath\bin\
