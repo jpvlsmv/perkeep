@@ -5,7 +5,7 @@ for:
 - 
   matrix:
     only:
-      - image: Ubuntu
+      - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
   clone_folder: /go/src/perkeep.org
 environment:
   matrix: 
