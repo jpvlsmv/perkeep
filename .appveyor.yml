@@ -1,13 +1,15 @@
 version: '{branch}-{build}'
 skip_tags: true
-clone_folder: c:\gopath\src\perkeep.org
 environment:
   matrix: 
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       GOPATH: c:\gopath
       PATH: c:\gopath\bin;c:\go\bin;%PATH%
       CGO_ENABLED: 0
+      clone_folder: c:\gopath\src\perkeep.org
     - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+      GOPATH: /usr/go/
+      clone_folder: /usr/go/src/github.com/$username/$project
 build_script:
 - cmd: go run make.go
 test_script:
